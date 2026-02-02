@@ -1,11 +1,93 @@
-<div class="books-list">
-  <div class="book-item">
-    <a href="./te1.pdf" target="_blank" download>✨ قسم تحاميد <span class="pdf-tag">تحميل PDF</span></a>
-  </div>
-  <div class="book-item">
-    <a href="./te2.pdf" target="_blank" download>✨ قسم جلالات <span class="pdf-tag">تحميل PDF</span></a>
-  </div>
-  <div class="book-item">
-    <a href="./te26.pdf" target="_blank" download>👤 المؤلف في سطور <span class="pdf-tag">تحميل PDF</span></a>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مكتبة طيبة المحبين | السيد عبد الله هاشم السروري</title>
+  
+  <style>
+    body { font-family: 'Cairo', sans-serif; margin: 0; background-color: #e9f7ef; color: #1b4332; line-height: 1.6; }
+    header { background-color: #2d6a4f; color: white; text-align: center; padding: 10px 0; position: fixed; top: 0; width: 100%; z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    header img { height: 70px; width: auto; margin-bottom: 5px; }
+    header h1 { margin: 0; font-size: 20px; font-weight: bold; }
+    main { padding-top: 140px; max-width: 900px; margin: auto; padding-bottom: 50px; }
+    
+    .works { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
+    .card { background-color: #ffffff; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; text-align: center; transition: transform 0.2s; }
+    .download-btn { background-color: #2d6a4f; color: white; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
+
+    .books-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; padding: 20px; }
+    .book-item { background: #fff; border-right: 5px solid #2d6a4f; border-radius: 8px; padding: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .book-item a { text-decoration: none; color: #1b4332; font-weight: bold; font-size: 14px; display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .pdf-tag { color: #d62828; font-size: 11px; background: #f8d7da; padding: 1px 6px; border-radius: 4px; border: 1px solid #f5c2c7; white-space: nowrap; }
+
+    footer { text-align: center; background-color: #2d6a4f; color: white; padding: 15px; margin-top: 40px; }
+    .seo-hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="شعار مكتبة طيبة المحبين" />
+    <h1>📚 مكتبة طيبة المحبين وروضة المحبوبين</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2 style="text-align:center; color:#1b4332;">🌿 أعمالنا وتطبيقاتنا 🌿</h2>
+      <div class="works">
+        <div class="card">
+          <h3>تطبيق أطلس السِّيَر النبوية الغُرَر</h3>
+          <a href="https://t.me/tebatalmhbeen/12" class="download-btn">⬇️ تحميل</a>
+        </div>
+        <div class="card">
+          <h3>كتاب أطلس السير النبوية PDF</h3>
+          <a href="https://t.me/tebatalmhbeen/17" class="download-btn">⬇️ تحميل</a>
+        </div>
+        <div class="card">
+          <h3>تطبيق طيبة المحبين</h3>
+          <a href="https://t.me/tebatalmhbeen/14" class="download-btn">⬇️ تحميل</a>
+        </div>
+      </div>
+    </section>
+
+    <hr style="border: 0; height: 1px; background: #ccc; margin: 40px 20px;">
+
+    <section>
+      <h2 style="text-align:center; color:#2d6a4f;">📖 محتويات ومؤلفات المكتبة</h2>
+      <div class="books-list">
+        <div class="book-item"><a href="te1.pdf" download="قسم تحاميد.pdf">1. قسم تحاميد <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te2.pdf" download="قسم جلالات.pdf">2. قسم جلالات <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te3.pdf" download="قسم تصليات.pdf">3. قسم تصليات <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te4.pdf" download="قسم قصائد ذكرى المولد النبوي.pdf">4. قسم قصائد ذكرى المولد النبوي <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te5.pdf" download="الإِبْهاج في قصة الإسراء والمعراج.pdf">5. قسم الإِبْهاج في قصة الإسراء والمعراج <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te6.pdf" download="العمدَةُ على نَهْجِ البُردة.pdf">6. العمدَةُ على نَهْجِ البُردة <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te7.pdf" download="الرندة على نهج البردة.pdf">7. الرَّندَةُ على نَهْجِ البُردة <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te8.pdf" download="الزبدة على نهج البردة.pdf">8. الزُبْدَةُ على نَهْجِ البُردة <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te9.pdf" download="القصيدة المحمدية.pdf">9. القصيدة المحمدية <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te10.pdf" download="الرمزية على نهج الهمزية.pdf">10. الرمزية على نهج الهمزية <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te11.pdf" download="قصيدة.pdf">11. (( قصيدة )) <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te12.pdf" download="حقيقة الحقائق ورقيقة الرقائق.pdf">12. حَقِيقَةُ الْحَقَائِق وَرَقِيقَةُ الرَّقَائِق <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te13.pdf" download="القصيدة الغزلية في الحقيقة الأزلية.pdf">13. الْقَصِيدَةُ الْغَزَلِيَّةُ فِي الْحَقِيقَةِ الْأَزَلِيَّةِ <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te14.pdf" download="والله ما عرف النبي سواه.pdf">14. (( وَاللَّـهِ مَا عَرَفَ النَّبِيَّ سِوَاهُ )) <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te15.pdf" download="الوسيلة الحسناء.pdf">15. الوسيلة الحسناء بأسماء الله الحسنى <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te16.pdf" download="التوسل المزان بسور القرآن.pdf">16. التوسل المزان بسور القرآن <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te17.pdf" download="درة الدرر وغرة الغرر.pdf">17. دُرَّةُ الدُّرَرِ وَغُرَّةُ الغُرَرْ <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te18.pdf" download="يا مجلي القمر بالنور.pdf">18. يَا مُجَلِّيْ الْقَمَرْ بِالنُّورْ <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te19.pdf" download="العدة في كشف الشدة.pdf">19. العدة في كشف الشدة <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te20.pdf" download="ريحانة القلب المهدي.pdf">20. ريحانة القلب المهدي <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te21.pdf" download="أنفاس هاشمية.pdf">21. أنْفَاسٌ هَاشِمِيَّةْ <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te22.pdf" download="حلية الخدم في الحمد لله الأتم.pdf">22. حِلْيَةُ الخَدَمِ فِي الحَمْدِللَّهِ الأتَمْ <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te23.pdf" download="أسنى المطلب باستغفار شهر رجب.pdf">23. أسْنَى المَطْلَبْ بِاستِغْفَارِ شهرِ رجبْ <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te24.pdf" download="الدر المنظم في الاسم الأعظم.pdf">24. الدُّرُّ المُنَظَّمْ (الاسم الأعظم) <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item"><a href="te25.pdf" download="طائرة السباق وباخرة اللحاق.pdf">25. طَائِرَةُ السُّبَّاقِ وَبَاخِرَةُ اللُّحَّاقِ <span class="pdf-tag">تحميل PDF</span></a></div>
+        <div class="book-item" style="background-color: #f8fdfa;"><a href="te26.pdf" download="المؤلف في سطور.pdf">26. المؤلف في سطور <span class="pdf-tag">تحميل PDF</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    جميع الحقوق محفوظة © 2026 مكتبة طيبة المحبين
+  </footer>
+</body>
+</html>
