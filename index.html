@@ -15,56 +15,67 @@
             background-color: #0b7a61; 
             color: white; 
             border-radius: 20px; 
-            margin-bottom: 30px; 
-            padding: 20px; 
+            margin-bottom: 25px; 
+            padding: 25px; 
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom: 5px solid rgba(0,0,0,0.2);
         }
-        .main-category img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 10px; border: 3px solid white; }
+        .main-category img { width: 90px; height: 90px; border-radius: 50%; margin-bottom: 15px; border: 3px solid white; background: white; }
+        .main-category h2 { margin: 10px 0; font-size: 22px; font-weight: bold; }
         
         .open-btn { 
             background-color: white; 
             color: #0b7a61; 
             border: none; 
-            padding: 10px 30px; 
-            border-radius: 25px; 
+            padding: 12px 35px; 
+            border-radius: 30px; 
             font-weight: bold; 
             cursor: pointer; 
             transition: 0.3s;
+            font-size: 16px;
         }
+        .open-btn:hover { background-color: #e0f2f1; transform: translateY(-2px); }
 
-        .books-container { display: none; margin-top: 20px; background: rgba(255,255,255,0.9); border-radius: 15px; padding: 15px; }
+        .books-container { 
+            display: none; 
+            margin-top: 20px; 
+            background: rgba(255,255,255,0.95); 
+            border-radius: 15px; 
+            padding: 15px; 
+            color: #1b4332;
+            text-align: right;
+        }
 
         .book-item { 
             background: #fff; 
             border-right: 6px solid #0b7a61; 
-            margin-bottom: 10px; 
+            margin-bottom: 12px; 
             padding: 15px; 
             border-radius: 10px; 
             display: flex; 
             justify-content: space-between; 
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
+        .book-title { font-size: 13px; font-weight: bold; line-height: 1.5; flex: 1; }
 
-        .btn-group { display: flex; gap: 8px; }
-        .btn-link { text-decoration: none; padding: 6px 12px; border-radius: 5px; font-size: 12px; font-weight: bold; }
+        .btn-group { display: flex; gap: 5px; }
+        .btn-link { text-decoration: none; padding: 7px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; }
         .btn-view { background: #e0f2f1; color: #0b7a61; border: 1px solid #0b7a61; }
         .btn-down { background: #0b7a61; color: white; }
 
-        /* تعديل لون أزرار التواصل إلى الأخضر */
-        .contact-section { text-align: center; margin-top: 40px; padding: 20px; background: white; border-radius: 15px; }
+        .contact-section { text-align: center; margin: 40px 10px; padding: 25px; background: white; border-radius: 20px; }
         .social-links a {
             display: inline-block;
-            background-color: #28a745; /* لون أخضر تواصل */
+            background-color: #28a745; 
             color: white;
             text-decoration: none;
-            margin: 5px 10px;
-            padding: 10px 25px;
-            border-radius: 30px;
+            margin: 8px;
+            padding: 12px 30px;
+            border-radius: 35px;
             font-weight: bold;
-            transition: 0.3s;
         }
-        .social-links a:hover { background-color: #218838; transform: scale(1.05); }
 
         footer { text-align: center; padding: 30px; color: #666; }
     </style>
@@ -77,61 +88,46 @@
 
 <main>
     <div class="main-category">
-        <img src="https://cdn-icons-png.flaticon.com/512/4561/4561081.png" alt="التوحيد">
+        <img src="https://cdn-icons-png.flaticon.com/512/4561/4561081.png">
         <h2>قسم التوحيد</h2>
         <button class="open-btn" onclick="toggleSection('tauheed')">فتح الأقسام</button>
         <div id="tauheed" class="books-container">
-            <div class="book-item">
-                <div>1. العروة الوثيقة فيما يجب بالشرع والحقيقة</div>
-                <div class="btn-group">
-                    <a href="roda1.pdf" target="_blank" class="btn-link btn-view">عرض</a>
-                    <a href="roda1.pdf" download class="btn-link btn-down">تحميل</a>
-                </div>
-            </div>
-            <div class="book-item">
-                <div>2. الروضة الأنيقة في شرح العروة الوثيقة</div>
-                <div class="btn-group">
-                    <a href="roda2.pdf" target="_blank" class="btn-link btn-view">عرض</a>
-                    <a href="roda2.pdf" download class="btn-link btn-down">تحميل</a>
-                </div>
-            </div>
-            <div class="book-item">
-                <div>3. الدُّرُّ المُنَظَّمْ فِيمَا يَخْتَصُّ بِهِ الإسْمُ الأعْظَمْ</div>
-                <div class="btn-group">
-                    <a href="roda3.pdf" target="_blank" class="btn-link btn-view">عرض</a>
-                    <a href="roda3.pdf" download class="btn-link btn-down">تحميل</a>
-                </div>
-            </div>
-            <div class="book-item">
-                <div>4. طَائيرةُ السُّبَّاقِ وَبَاخِرَةُ اللُّحَّاقِ</div>
-                <div class="btn-group">
-                    <a href="roda4.pdf" target="_blank" class="btn-link btn-view">عرض</a>
-                    <a href="roda4.pdf" download class="btn-link btn-down">تحميل</a>
-                </div>
-            </div>
+            <script>
+                const tauheedBooks = ["العروة الوثيقة فيما يجب بالشرع والحقيقة", "الروضة الأنيقة في شرح العروة الوثيقة", "الدُّرُّ المُنَظَّمْ فِيمَا يَخْتَصُّ بِهِ الإسْمُ الأعْظَمْ", "طَائِرَةُ السُّبَّاقِ وَبَاخِرَةُ اللُّحَّاقِ"];
+                tauheedBooks.forEach((t, i) => {
+                    document.write(`<div class="book-item"><div class="book-title">${i+1}. ${t}</div><div class="btn-group"><a href="roda${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="roda${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`);
+                });
+            </script>
         </div>
     </div>
 
     <div class="main-category" style="background-color: #086351;">
-        <img src="https://cdn-icons-png.flaticon.com/512/1164/1164687.png" alt="الموالد">
+        <img src="https://cdn-icons-png.flaticon.com/512/1164/1164687.png">
         <h2>قسم الموالد (أطلس السير النبوية)</h2>
-        <button class="open-btn" onclick="toggleSection('mwalid')">فتح 20 قسماً</button>
+        <button class="open-btn" onclick="toggleSection('mwalid')">فتح الأقسام</button>
         <div id="mwalid" class="books-container"></div>
     </div>
 
     <div class="main-category" style="background-color: #054d3f;">
-        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913360.png" alt="الصلاة">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913360.png">
         <h2>قسم الصلاة على النبي (الدرر البهية)</h2>
         <button class="open-btn" onclick="toggleSection('dorar')">فتح الأقسام</button>
         <div id="dorar" class="books-container">
             <div class="book-item">
-                <div>الدرر البهية والجواهر السنية في الصلاة على خير البرية ﷺ</div>
+                <div class="book-title">الدرر البهية والجواهر السنية في الصلاة على خير البرية ﷺ</div>
                 <div class="btn-group">
                     <a href="alhzb1.pdf" target="_blank" class="btn-link btn-view">قراءة</a>
                     <a href="alhzb1.pdf" download class="btn-link btn-down">تحميل</a>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="main-category" style="background-color: #144d34;">
+        <img src="https://cdn-icons-png.flaticon.com/512/3210/3210985.png">
+        <h2>قسم قصائد طيبة المحبين</h2>
+        <button class="open-btn" onclick="toggleSection('old_content')">فتح 28 قسماً</button>
+        <div id="old_content" class="books-container"></div>
     </div>
 
     <section class="contact-section">
@@ -150,43 +146,23 @@
 <script>
     function toggleSection(id) {
         const section = document.getElementById(id);
-        section.style.display = (section.style.display === 'block') ? 'none' : 'block';
+        const isOpen = section.style.display === 'block';
+        document.querySelectorAll('.books-container').forEach(c => c.style.display = 'none');
+        section.style.display = isOpen ? 'none' : 'block';
     }
 
-    const mwalidTitles = [
-        "شراب الألباب العرفانية في مولد شجرة الأصل النورانية ﷺ",
-        "عرف الخُزام في مولد غاية القصد والمرام ﷺ",
-        "الإنشراح الصدري في مولد الكوكب الدري ﷺ",
-        "فيض ربي الرحيم الودود في مولد روح الوجود ﷺ",
-        "الدرر البهية الحِسان في مولد سيد ولد عدنان ﷺ",
-        "عين التسنيم في مولد صاحب الخلق العظيم ﷺ",
-        "أريج الأزهار الشذية في السيرة النبوية",
-        "المِسْك الأذفر في مولد صَاحِب حَوضِ الكَوثر ﷺ",
-        "كِيمْياء أرْبَاب القلوب في مولد الحَبيب المَحْبُوب ﷺ",
-        "الروائح العطرية في مولد أفضل البرية ﷺ",
-        "رحيق الشراب الأحلى في مولد من دنا فتدلى ﷺ",
-        "العسجد في مولد النبي الأمجد والرسول الممجد ﷺ",
-        "المِسْك الفوَّاح في مولد المصباح ﷺ",
-        "الترياق في مولد صفوة الخلاق ﷺ",
-        "الإتحاف في مولد كامل الأوصاف ﷺ",
-        "عبير الزهر الشذي في مولد النبي محمد ﷺ",
-        "جالي الصدا في مولد بدر الهدى ﷺ",
-        "نَدُّ النادي في مولد الهادي ﷺ",
-        "العود النَّدي في المولد المحمدي ﷺ",
-        "اللُّبَاب في مولد جوهر الألباب ﷺ"
-    ];
-
+    // توليد الموالد الـ 20
+    const mwalidTitles = ["شراب الألباب العرفانية", "عرف الخُزام", "الإنشراح الصدري", "فيض ربي الرحيم", "الدرر البهية الحِسان", "عين التسنيم", "أريج الأزهار الشذية", "المِسْك الأذفر", "كِيمْياء أرْبَاب القلوب", "الروائح العطرية", "رحيق الشراب الأحلى", "العسجد", "المِسْك الفوَّاح", "الترياق", "الإتحاف", "عبير الزهر الشذي", "جالي الصدا", "نَدُّ النادي", "العود النَّدي", "اللُّبَاب"];
     const mwalidContainer = document.getElementById('mwalid');
-    mwalidTitles.forEach((title, index) => {
-        const num = index + 1;
-        mwalidContainer.innerHTML += `
-            <div class="book-item">
-                <div style="font-size: 13px;">${num}. ${title}</div>
-                <div class="btn-group">
-                    <a href="mwled${num}.pdf" target="_blank" class="btn-link btn-view">قراءة</a>
-                    <a href="mwled${num}.pdf" download class="btn-link btn-down">تحميل</a>
-                </div>
-            </div>`;
+    mwalidTitles.forEach((t, i) => {
+        mwalidContainer.innerHTML += `<div class="book-item"><div class="book-title">${i+1}. ${t}</div><div class="btn-group"><a href="mwled${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="mwled${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`;
+    });
+
+    // توليد المحتوى القديم الـ 28
+    const oldBooks = ["قسم تحاميد", "قسم جلالات", "قسم تصليات", "قصائد المولد النبوي", "الإِبْهاج في المعراج", "العمدَةُ على البُردة", "الرَّندَةُ على البُردة", "الزُبْدَةُ على البُردة", "القصيدة المحمدية", "الرمزية على الهمزية", "قصيدة", "حَقِيقَةُ الْحَقَائِق", "الْقَصِيدَةُ الْغَزَلِيَّةُ", "مَا عَرَفَ النَّبِيَّ سِوَاهُ", "الوسيلة الحسناء", "التوسل الأسنى", "التوسل المزان", "دُرَّةُ الدُّرَرِ", "يَا مُجَلِّيْ الْقَمَرْ", "العدة في كشف الشدة", "تخميس لامية ابن الوردي", "أنْفَاسٌ هَاشِمِيَّةْ", "حِلْيَةُ الخَدَمِ", "النظم الاغر", "أسْنَى المَطْلَبْ", "الدُّرُّ المُنَظَّمْ", "طَائِرَةُ السُّبَّاقِ", "المؤلف في سطور"];
+    const oldContainer = document.getElementById('old_content');
+    oldBooks.forEach((t, i) => {
+        oldContainer.innerHTML += `<div class="book-item"><div class="book-title">${i+1}. ${t}</div><div class="btn-group"><a href="te${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="te${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`;
     });
 </script>
 </body>
