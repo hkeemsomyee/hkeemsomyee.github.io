@@ -8,8 +8,10 @@
      crossorigin="anonymous"></script>
 
     <title>مكتبة طيبة المحبين وروضة المحبوبين | السيد عبد الله هاشم السروري</title>
-    <meta name="description" content="المكتبة الجامعة لمؤلفات السيد عبد الله هاشم السروري، تضم أقسام التوحيد، الموالد النبوية، الصلاة على النبي، والقصائد العرفانية.">
     
+    <meta name="description" content="المكتبة الجامعة لمؤلفات السيد عبد الله هاشم السروري، تضم تراث الطريقة الشاذلية، علوم ابن علوان، ومدائح علماء اليمن وتعز والجند.">
+    <meta name="keywords" content="السيد عبد الله هاشم السروري، الطريقة الشاذلية، ابن علوان، اتشاد، مديح، مديح نبوي، علي جمعه، جابر بغدادي، السروري، دار المصطفى، تريم، علماء اليمن، تعز، الجند، حب النبي، بغدادي، رباط، المقاشره، السميعي، رباط الجند، الظهرة، طيبة المحبين، أطلس السير، العروة الوثيقة، الروضة الأنيقة، الموروث الصوفي">
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Cairo', sans-serif; margin: 0; background-color: #f0f9f5; color: #1b4332; padding-bottom: 60px; }
@@ -17,26 +19,35 @@
         header img { height: 70px; width: auto; margin-bottom: 5px; }
         header h1 { margin: 0; font-size: 18px; }
         
-        /* تنسيق شريط البحث الجديد */
+        /* شريط البحث */
         .search-container { max-width: 900px; margin: 15px auto; padding: 0 10px; }
         #bookSearch { width: 100%; padding: 12px 20px; border-radius: 30px; border: 2px solid #0b7a61; font-family: 'Cairo'; font-size: 16px; outline: none; box-sizing: border-box; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
 
         main { max-width: 900px; margin: 20px auto; padding: 10px; }
         .about-section { background: white; padding: 25px; border-radius: 20px; margin-bottom: 30px; text-align: center; border: 1px solid #d1e7dd; box-shadow: 0 4px 6px rgba(0,0,0,0.03); }
+        .about-section p { font-size: 15px; color: #444; line-height: 1.8; margin-bottom: 15px; }
+        
         .ad-container { margin: 20px 0; text-align: center; background: #fff; padding: 10px; border-radius: 10px; overflow: hidden; }
 
-        .main-category { background-color: #0b7a61; color: white; border-radius: 20px; margin-bottom: 25px; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .section-desc { font-size: 14px; opacity: 0.9; margin: 10px 0 20px; line-height: 1.6; padding: 0 10px; }
-        
+        .main-category { background-color: #0b7a61; color: white; border-radius: 20px; margin-bottom: 25px; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-bottom: 5px solid rgba(0,0,0,0.2); }
         .main-category img.section-logo { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px; border: 3px solid white; background: white; object-fit: cover; }
+        .main-category h2 { margin: 10px 0; font-size: 22px; }
         .open-btn { background-color: white; color: #0b7a61; border: none; padding: 12px 35px; border-radius: 30px; font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 16px; }
+        .app-download-btn { display: inline-block; background-color: #0088cc; color: white; text-decoration: none; padding: 12px 30px; border-radius: 30px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+        
         .books-container { display: none; margin-top: 20px; background: rgba(255,255,255,0.98); border-radius: 15px; padding: 15px; color: #1b4332; text-align: right; }
         .book-item { background: #fff; border-right: 6px solid #0b7a61; margin-bottom: 12px; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }
         .btn-link { text-decoration: none; padding: 7px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; }
         .btn-view { background: #e0f2f1; color: #0b7a61; border: 1px solid #0b7a61; }
         .btn-down { background: #0b7a61; color: white; }
         
-        .social-links a { display: inline-block; color: white; text-decoration: none; margin: 8px; padding: 12px 25px; border-radius: 35px; font-weight: bold; }
+        .contact-section { text-align: center; margin: 40px 10px; padding: 25px; background: white; border-radius: 20px; border: 1px solid #d1e7dd; }
+        .social-links a { display: inline-block; color: white; text-decoration: none; margin: 8px; padding: 12px 25px; border-radius: 35px; font-weight: bold; transition: 0.3s; }
+        .btn-whatsapp { background-color: #28a745; }
+        .btn-telegram { background-color: #0088cc; }
+        .btn-share { background-color: #6c757d; cursor: pointer; }
+        
+        .floating-share { position: fixed; bottom: 20px; left: 20px; background: #2d6a4f; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; z-index: 2000; font-size: 20px; text-decoration: none; }
         footer { text-align: center; padding: 30px; color: #666; font-size: 13px; }
     </style>
 </head>
@@ -47,50 +58,83 @@
     <h1>مكتبة طيبة المحبين وروضة المحبوبين</h1>
 </header>
 
+<a class="floating-share" onclick="shareWebsite()" title="مشاركة الموقع">🔗</a>
+
 <div class="search-container">
-    <input type="text" id="bookSearch" placeholder="🔍 ابحث عن اسم كتاب أو قصيدة..." onkeyup="filterBooks()">
+    <input type="text" id="bookSearch" placeholder="🔍 ابحث عن اسم كتاب، طريقة، أو عالم..." onkeyup="filterBooks()">
 </div>
 
 <main>
     <section class="about-section">
-        <h2>🌿 حول المكتبة</h2>
-        <p>المنصة الرقمية الجامعة للتراث الفكري والعرفاني للسيد عبد الله هاشم السروري.</p>
+        <h2>🌿 حول مكتبة طيبة المحبين وروضة المحبوبين</h2>
+        <p>
+            تعتبر <strong>مكتبة طيبة المحبين</strong> المنصة الرقمية الرسمية والجامعة للتراث الفكري والعرفاني للسيد <strong>عبد الله هاشم السروري</strong>. 
+            نهدف من خلال هذه المكتبة إلى نشر علوم التوحيد الأصيلة، والسيرة النبوية العطرة المشروحة في "أطلس السير"، بالإضافة إلى الدواوين الشعرية التي تفيض بالمحبة والروحانية من بلاد اليمن السعيد، تعز والجند والظهرة.
+        </p>
+        <p>
+            تضم المكتبة أقساماً متخصصة تشمل مؤلفات في التصوف الإسلامي المعتدل على نهج <strong>الطريقة الشاذلية</strong>، وعلوم الإمام <strong>ابن علوان</strong>، وأوراد الصلاة على النبي ﷺ. 
+            كل ما نقدمه هنا متاح للتحميل المجاني والقراءة المباشرة لنشر المديح والخير والوعي برباطات العلم والهدى.
+        </p>
     </section>
+
+    <div class="ad-container">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3471082371880025" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+    </div>
+
+    <div class="main-category" style="background-color: #2d6a4f;">
+        <img src="m4.png" class="section-logo">
+        <h2>تحميل تطبيق طيبة المحبين</h2>
+        <a href="https://t.me/tebatalmhbeen/11" target="_blank" class="app-download-btn">📥 تحميل من التيليجرام</a>
+    </div>
+
+    <div class="main-category" style="background-color: #1b4332;">
+        <img src="m0.png" class="section-logo">
+        <h2>تحميل تطبيق أطلس السير</h2>
+        <a href="https://t.me/tebatalmhbeen/12" target="_blank" class="app-download-btn">📥 تحميل من التيليجرام</a>
+    </div>
 
     <div class="main-category">
         <img src="m1.png" class="section-logo">
-        <h2>قسم التوحيد</h2>
-        <p class="section-desc">استكشف أصول العقيدة الإسلامية والتوحيد الخالص من خلال مؤلفات السيد عبد الله هاشم السروري.</p>
-        <button class="open-btn" onclick="toggleSection('tauheed')">عرض الكتب</button>
+        <h2>قسم التوحيد والعقيدة</h2>
+        <button class="open-btn" onclick="toggleSection('tauheed')">فتح الأقسام</button>
         <div id="tauheed" class="books-container"></div>
     </div>
-
+    
     <div class="main-category" style="background-color: #086351;">
         <img src="m2.png" class="section-logo">
-        <h2>قسم الموالد (أطلس السير)</h2>
-        <p class="section-desc">مجموعة شاملة من الموالد النبوية ودروس السيرة من كتاب أطلس السير النبوية.</p>
-        <button class="open-btn" onclick="toggleSection('mwalid')">عرض الكتب</button>
+        <h2>قسم الموالد (أطلس السير النبوية)</h2>
+        <button class="open-btn" onclick="toggleSection('mwalid')">فتح الأقسام</button>
         <div id="mwalid" class="books-container"></div>
     </div>
 
     <div class="main-category" style="background-color: #054d3f;">
         <img src="m3.png" class="section-logo">
-        <h2>قسم الصلاة على النبي</h2>
-        <p class="section-desc">أوراد وصلوات مباركة مستوحاة من كتاب الدرر البهية والجواهر السنية.</p>
-        <button class="open-btn" onclick="toggleSection('dorar')">عرض الكتب</button>
+        <h2>قسم الصلاة على النبي (الدرر البهية)</h2>
+        <button class="open-btn" onclick="toggleSection('dorar')">فتح الأقسام</button>
         <div id="dorar" class="books-container"></div>
     </div>
 
     <div class="main-category" style="background-color: #144d34;">
         <img src="m4.png" class="section-logo">
         <h2>قسم قصائد طيبة المحبين</h2>
-        <p class="section-desc">كنوز من الشعر العرفاني والقصائد الوجدانية التي تفيض بالمحبة الإلهية.</p>
         <button class="open-btn" onclick="toggleSection('old_content')">فتح 28 قسماً</button>
         <div id="old_content" class="books-container"></div>
     </div>
+
+    <section class="contact-section">
+        <h2>📞 تواصل وانشر الخير</h2>
+        <div class="social-links">
+            <a href="https://wa.me/00967734404355" target="_blank" class="btn-whatsapp">واتساب</a>
+            <a href="https://t.me/tebatalmhbeen" target="_blank" class="btn-telegram">تليجرام</a>
+            <a onclick="shareWebsite()" class="btn-share">📢 مشاركة الموقع</a>
+        </div>
+    </section>
 </main>
 
-<footer><p>جميع الحقوق محفوظة &copy; مكتبة طيبة المحبين 2026</p></footer>
+<footer>
+    <p>جميع الحقوق محفوظة &copy; مكتبة طيبة المحبين 2026</p>
+</footer>
 
 <script>
     function toggleSection(id) {
@@ -100,19 +144,26 @@
         section.style.display = isOpen ? 'none' : 'block';
     }
 
-    // وظيفة البحث الذكي
+    function shareWebsite() {
+        if (navigator.share) {
+            navigator.share({ title: 'مكتبة طيبة المحبين', text: 'أدعوكم لزيارة مكتبة طيبة المحبين للسيد عبد الله هاشم السروري', url: window.location.href });
+        } else { alert("رابط الموقع: " + window.location.href); }
+    }
+
     function filterBooks() {
         let input = document.getElementById('bookSearch').value.toLowerCase();
         let items = document.getElementsByClassName('book-item');
         let containers = document.querySelectorAll('.books-container');
         
-        containers.forEach(c => c.style.display = 'block'); // فتح الكل أثناء البحث
-
-        for (let i = 0; i < items.length; i++) {
-            let title = items[i].querySelector('.book-title').innerText.toLowerCase();
-            items[i].style.display = title.includes(input) ? "flex" : "none";
+        if(input !== "") {
+            containers.forEach(c => c.style.display = 'block');
+            for (let i = 0; i < items.length; i++) {
+                let title = items[i].querySelector('.book-title').innerText.toLowerCase();
+                items[i].style.display = title.includes(input) ? "flex" : "none";
+            }
+        } else {
+            containers.forEach(c => c.style.display = 'none');
         }
-        if(input === "") containers.forEach(c => c.style.display = 'none');
     }
 
     // تعبئة البيانات
