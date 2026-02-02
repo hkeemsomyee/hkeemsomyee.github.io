@@ -16,18 +16,17 @@
         body { font-family: 'Cairo', sans-serif; margin: 0; background-color: #f0f9f5; color: #1b4332; padding-bottom: 60px; text-align: center; }
         header { background-color: #0b4d3e; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
         header img { height: 70px; width: auto; margin-bottom: 5px; border-radius: 8px; }
-        header h1 { margin: 0; font-size: 18px; color: white; }
+        header h1 { margin: 0; font-size: 18px; color: white !important; }
         
         .search-container { max-width: 900px; margin: 15px auto; padding: 0 10px; }
         #bookSearch { width: 100%; padding: 12px 20px; border-radius: 30px; border: 2px solid #0b7a61; font-family: 'Cairo'; font-size: 16px; outline: none; box-sizing: border-box; }
 
         main { max-width: 900px; margin: 20px auto; padding: 10px; }
         .about-section { background: white; padding: 25px; border-radius: 20px; margin-bottom: 30px; text-align: right; border: 1px solid #d1e7dd; box-shadow: 0 4px 6px rgba(0,0,0,0.03); }
-        .about-section h2 { color: #0b4d3e; text-align: center; margin-top: 0; }
-        .about-section p { font-size: 16px; color: #444; line-height: 1.8; }
+        .about-section h2 { color: #0b4d3e; text-align: center; }
         
         .main-category { background-color: #0b7a61; color: white; border-radius: 20px; margin-bottom: 25px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .main-category h2 { color: white; margin: 10px 0; font-size: 20px; } /* تأكيد لون العناوين أبيض */
+        .main-category h2 { color: white !important; margin: 10px 0; font-size: 20px; }
         .main-category img.section-logo { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px; border: 3px solid white; background: white; object-fit: cover; }
         
         .app-download-btn { display: inline-block; background-color: #0088cc; color: white; text-decoration: none; padding: 12px 30px; border-radius: 30px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
@@ -35,13 +34,11 @@
         
         .books-container { display: none; margin-top: 20px; background: rgba(255,255,255,0.98); border-radius: 15px; padding: 15px; text-align: right; color: #1b4332; }
         .book-item { background: #fff; border-right: 6px solid #0b7a61; margin-bottom: 12px; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .book-title { font-weight: bold; font-size: 14px; }
         .btn-link { text-decoration: none; padding: 7px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; }
         .btn-view { background: #e0f2f1; color: #0b7a61; border: 1px solid #0b7a61; }
         .btn-down { background: #0b7a61; color: white; }
 
         .contact-section { background: white; padding: 25px; border-radius: 20px; margin-top: 40px; border: 1px solid #d1e7dd; }
-        .contact-section h2 { color: #0b4d3e; margin-top: 0; }
         .social-links a { display: inline-block; color: white; text-decoration: none; margin: 8px; padding: 12px 25px; border-radius: 35px; font-weight: bold; }
         .btn-whatsapp { background-color: #28a745; }
         .btn-telegram { background-color: #0088cc; }
@@ -67,10 +64,7 @@
 <main>
     <section class="about-section">
         <h2>🌿 حول مكتبة طيبة المحبين</h2>
-        <p>
-            تعتبر <strong>مكتبة طيبة المحبين</strong> المنصة الرقمية الرسمية والجامعة للتراث الفكري والعرفاني للسيد <strong>عبد الله هاشم السروري</strong>. 
-            نهدف من خلال هذه المكتبة إلى نشر علوم التوحيد الأصيلة، والسيرة النبوية العطرة، بالإضافة إلى الدواوين الشعرية الروحانية التي تخدم طلاب العلم والباحثين.
-        </p>
+        <p>تعتبر <strong>مكتبة طيبة المحبين</strong> المنصة الرقمية الرسمية والجامعة للتراث الفكري والعرفاني للسيد <strong>عبد الله هاشم السروري</strong>. نهدف من خلال هذه المكتبة إلى نشر علوم التوحيد الأصيلة، والسيرة النبوية العطرة، بالإضافة إلى الدواوين الشعرية الروحانية التي تخدم طلاب العلم والباحثين.</p>
     </section>
 
     <div class="main-category" style="background-color: #2d6a4f;">
@@ -94,14 +88,14 @@
 
     <div class="main-category" style="background-color: #086351;">
         <img src="m2.png" class="section-logo">
-        <h2>قسم الموالد النبوية</h2>
+        <h2>قسم الموالد النبوية (20 قسماً)</h2>
         <button class="open-btn" onclick="toggleSection('mwalid')">عرض الكتب</button>
         <div id="mwalid" class="books-container"></div>
     </div>
 
     <div class="main-category" style="background-color: #144d34;">
         <img src="m4.png" class="section-logo">
-        <h2>قسم قصائد طيبة المحبين</h2>
+        <h2>قسم قصائد طيبة المحبين (28 قسماً)</h2>
         <button class="open-btn" onclick="toggleSection('old_content')">عرض القصائد</button>
         <div id="old_content" class="books-container"></div>
     </div>
@@ -145,14 +139,16 @@
         } else { containers.forEach(c => c.style.display = 'none'); }
     }
 
-    // تعبئة البيانات
+    // تعبئة البيانات كاملة وبدون نقص
     const tauheed = ["العروة الوثيقة", "الروضة الأنيقة", "الدُّرُّ المُنَظَّمْ", "طَائِرَةُ السُّبَّاقِ"];
     tauheed.forEach((t, i) => { document.getElementById('tauheed').innerHTML += `<div class="book-item"><div class="book-title">${t}</div><div class="btn-group"><a href="roda${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="roda${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`; });
 
-    const mwalid = ["شراب الألباب", "عرف الخُزام", "الدرر البهية"];
+    // كامل الـ 20 مولد
+    const mwalid = ["شراب الألباب", "عرف الخُزام", "الإنشراح الصدري", "فيض ربي", "الدرر البهية", "عين التسنيم", "أريج الأزهار", "المِسْك الأذفر", "كِيمْياء أرْبَاب القلوب", "الروائح العطرية", "رحيق الشراب", "العسجد", "المِسْك الفوَّاح", "الترياق", "الإتحاف", "عبير الزهر", "جالي الصدا", "نَدُّ النادي", "العود النَّدي", "اللُّبَاب"];
     mwalid.forEach((t, i) => { document.getElementById('mwalid').innerHTML += `<div class="book-item"><div class="book-title">${t}</div><div class="btn-group"><a href="mwled${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="mwled${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`; });
 
-    const oldBooks = ["قسم تحاميد", "قسم جلالات", "القصيدة المحمدية", "المؤلف في سطور"];
+    // كامل الـ 28 قصيدة
+    const oldBooks = ["قسم تحاميد", "قسم جلالات", "قسم تصليات", "قصائد المولد", "الإِبْهاج", "العمدَةُ", "الرَّندَةُ", "الزُبْدَةُ", "القصيدة المحمدية", "الرمزية", "قصيدة", "حَقِيقَةُ الْحَقَائِق", "الْقَصِيدَةُ الْغَزَلِيَّةُ", "مَا عَرَفَ النَّبِيَّ", "الوسيلة الحسناء", "التوسل الأسنى", "التوسل المزان", "دُرَّةُ الدُّرَرِ", "يَا مُجَلِّيْ الْقَمَرْ", "العدة", "تخميس ابن الوردي", "أنْفَاسٌ هَاشِمِيَّةْ", "حِلْيَةُ الخَدَمِ", "النظم الاغر", "أسْنَى المَطْلَبْ", "الدُّرُّ المُنَظَّمْ", "طَائِرَةُ السُّبَّاقِ", "المؤلف في سطور"];
     oldBooks.forEach((t, i) => { document.getElementById('old_content').innerHTML += `<div class="book-item"><div class="book-title">${t}</div><div class="btn-group"><a href="te${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="te${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`; });
 </script>
 </body>
