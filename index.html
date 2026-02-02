@@ -20,6 +20,10 @@
         main { max-width: 900px; margin: 20px auto; padding: 10px; }
         .about-section { background: white; padding: 25px; border-radius: 20px; margin-bottom: 30px; text-align: center; border: 1px solid #d1e7dd; box-shadow: 0 4px 6px rgba(0,0,0,0.03); }
         .about-section p { font-size: 15px; color: #444; line-height: 1.8; margin-bottom: 15px; }
+        
+        /* تنسيق حاوية الإعلانات لتبدو احترافية */
+        .ad-container { margin: 20px 0; text-align: center; background: #fff; padding: 10px; border-radius: 10px; overflow: hidden; }
+
         .main-category { background-color: #0b7a61; color: white; border-radius: 20px; margin-bottom: 25px; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-bottom: 5px solid rgba(0,0,0,0.2); }
         .main-category img.section-logo { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px; border: 3px solid white; background: white; object-fit: cover; }
         .main-category h2 { margin: 10px 0; font-size: 22px; }
@@ -53,13 +57,19 @@
         <h2>🌿 حول مكتبة طيبة المحبين وروضة المحبوبين</h2>
         <p>
             تعتبر <strong>مكتبة طيبة المحبين</strong> المنصة الرقمية الرسمية والجامعة للتراث الفكري والعرفاني للسيد <strong>عبد الله هاشم السروري</strong>. 
-            نهدف من خلال هذه المكتبة إلى نشر علوم التوحيد الأصيلة، والسيرة النبوية العطرة المشروحة في "أطلس السير"، بالإضافة إلى الدواوين الشعرية التي تفيض بالمحبة والروحانية.
-        </p>
-        <p>
-            تضم المكتبة أقساماً متخصصة تشمل مؤلفات في التصوف الإسلامي المعتدل، وأوراد الصلاة على النبي ﷺ (الدرر البهية)، ومجموعة ضخمة من القصائد والتحاميد والجلالات التي تخدم الباحثين عن المعرفة الروحية والأدب العرفاني. 
-            كل ما نقدمه هنا متاح للتحميل المجاني والقراءة المباشرة لنشر الخير والوعي.
+            نهدف من خلال هذه المكتبة إلى نشر علوم التوحيد الأصيلة، والسيرة النبوية العطرة المشروحة في "أطلس السير".
         </p>
     </section>
+
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3471082371880025"
+             data-ad-slot="auto"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+    </div>
 
     <div class="main-category" style="background-color: #2d6a4f;">
         <img src="m4.png" class="section-logo">
@@ -74,6 +84,17 @@
     </div>
 
     <div class="main-category"><img src="m1.png" class="section-logo"><h2>قسم التوحيد</h2><button class="open-btn" onclick="toggleSection('tauheed')">فتح الأقسام</button><div id="tauheed" class="books-container"></div></div>
+    
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-3471082371880025"
+             data-ad-slot="auto"></ins>
+        <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+    </div>
+
     <div class="main-category" style="background-color: #086351;"><img src="m2.png" class="section-logo"><h2>قسم الموالد (أطلس السير النبوية)</h2><button class="open-btn" onclick="toggleSection('mwalid')">فتح الأقسام</button><div id="mwalid" class="books-container"></div></div>
     <div class="main-category" style="background-color: #054d3f;"><img src="m3.png" class="section-logo"><h2>قسم الصلاة على النبي (الدرر البهية)</h2><button class="open-btn" onclick="toggleSection('dorar')">فتح الأقسام</button><div id="dorar" class="books-container"></div></div>
     <div class="main-category" style="background-color: #144d34;"><img src="m4.png" class="section-logo"><h2>قسم قصائد طيبة المحبين</h2><button class="open-btn" onclick="toggleSection('old_content')">فتح 28 قسماً</button><div id="old_content" class="books-container"></div></div>
@@ -108,7 +129,7 @@
         }
     }
 
-    // محتوى الأقسام آلياً
+    // محتوى الأقسام (نفس المحتوى السابق لضمان استمرارية الروابط)
     const tauheed = ["العروة الوثيقة", "الروضة الأنيقة", "الدُّرُّ المُنَظَّمْ", "طَائِرَةُ السُّبَّاقِ"];
     const tCont = document.getElementById('tauheed');
     tauheed.forEach((t, i) => { tCont.innerHTML += `<div class="book-item"><div class="book-title">${i+1}. ${t}</div><div class="btn-group"><a href="roda${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="roda${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`; });
