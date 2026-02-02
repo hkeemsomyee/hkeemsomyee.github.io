@@ -16,26 +16,32 @@
         body { font-family: 'Cairo', sans-serif; margin: 0; background-color: #f0f9f5; color: #1b4332; padding-bottom: 60px; text-align: center; }
         header { background-color: #0b4d3e; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
         header img { height: 70px; width: auto; margin-bottom: 5px; border-radius: 8px; }
-        header h1 { margin: 0; font-size: 18px; }
+        header h1 { margin: 0; font-size: 18px; color: white; }
         
         .search-container { max-width: 900px; margin: 15px auto; padding: 0 10px; }
         #bookSearch { width: 100%; padding: 12px 20px; border-radius: 30px; border: 2px solid #0b7a61; font-family: 'Cairo'; font-size: 16px; outline: none; box-sizing: border-box; }
 
         main { max-width: 900px; margin: 20px auto; padding: 10px; }
         .about-section { background: white; padding: 25px; border-radius: 20px; margin-bottom: 30px; text-align: right; border: 1px solid #d1e7dd; box-shadow: 0 4px 6px rgba(0,0,0,0.03); }
+        .about-section h2 { color: #0b4d3e; text-align: center; margin-top: 0; }
         .about-section p { font-size: 16px; color: #444; line-height: 1.8; }
         
         .main-category { background-color: #0b7a61; color: white; border-radius: 20px; margin-bottom: 25px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .main-category h2 { color: white; margin: 10px 0; font-size: 20px; } /* تأكيد لون العناوين أبيض */
         .main-category img.section-logo { width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px; border: 3px solid white; background: white; object-fit: cover; }
+        
+        .app-download-btn { display: inline-block; background-color: #0088cc; color: white; text-decoration: none; padding: 12px 30px; border-radius: 30px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
         .open-btn { background-color: white; color: #0b7a61; border: none; padding: 12px 35px; border-radius: 30px; font-weight: bold; cursor: pointer; font-size: 16px; }
         
-        .books-container { display: none; margin-top: 20px; background: rgba(255,255,255,0.98); border-radius: 15px; padding: 15px; text-align: right; }
-        .book-item { background: #fff; border-right: 6px solid #0b7a61; margin-bottom: 12px; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .books-container { display: none; margin-top: 20px; background: rgba(255,255,255,0.98); border-radius: 15px; padding: 15px; text-align: right; color: #1b4332; }
+        .book-item { background: #fff; border-right: 6px solid #0b7a61; margin-bottom: 12px; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .book-title { font-weight: bold; font-size: 14px; }
         .btn-link { text-decoration: none; padding: 7px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; }
         .btn-view { background: #e0f2f1; color: #0b7a61; border: 1px solid #0b7a61; }
         .btn-down { background: #0b7a61; color: white; }
 
         .contact-section { background: white; padding: 25px; border-radius: 20px; margin-top: 40px; border: 1px solid #d1e7dd; }
+        .contact-section h2 { color: #0b4d3e; margin-top: 0; }
         .social-links a { display: inline-block; color: white; text-decoration: none; margin: 8px; padding: 12px 25px; border-radius: 35px; font-weight: bold; }
         .btn-whatsapp { background-color: #28a745; }
         .btn-telegram { background-color: #0088cc; }
@@ -65,11 +71,19 @@
             تعتبر <strong>مكتبة طيبة المحبين</strong> المنصة الرقمية الرسمية والجامعة للتراث الفكري والعرفاني للسيد <strong>عبد الله هاشم السروري</strong>. 
             نهدف من خلال هذه المكتبة إلى نشر علوم التوحيد الأصيلة، والسيرة النبوية العطرة، بالإضافة إلى الدواوين الشعرية الروحانية التي تخدم طلاب العلم والباحثين.
         </p>
-        <p>
-            تضم المكتبة أقساماً متخصصة تشمل المؤلفات الفقهية، والرسائل الوجدانية، وأوراد الصلاة على النبي ﷺ. 
-            كل ما نقدمه هنا متاح للتحميل المجاني والقراءة المباشرة لنشر العلم والوعي الروحي.
-        </p>
     </section>
+
+    <div class="main-category" style="background-color: #2d6a4f;">
+        <img src="m4.png" class="section-logo">
+        <h2>تطبيق طيبة المحبين (أندرويد)</h2>
+        <a href="https://t.me/tebatalmhbeen/11" target="_blank" class="app-download-btn">📥 تحميل من التيليجرام</a>
+    </div>
+
+    <div class="main-category" style="background-color: #1b4332;">
+        <img src="m0.png" class="section-logo">
+        <h2>تطبيق أطلس السير (أندرويد)</h2>
+        <a href="https://t.me/tebatalmhbeen/12" target="_blank" class="app-download-btn">📥 تحميل من التيليجرام</a>
+    </div>
 
     <div class="main-category">
         <img src="m1.png" class="section-logo">
@@ -95,7 +109,7 @@
     <section class="contact-section">
         <h2>📞 تواصل وانشر الخير</h2>
         <div class="social-links">
-            <a href="https://wa.me/+967734404355" target="_blank" class="btn-whatsapp">واتساب</a>
+            <a href="https://wa.me/00967734404355" target="_blank" class="btn-whatsapp">واتساب</a>
             <a href="https://t.me/tebatalmhbeen" target="_blank" class="btn-telegram">تليجرام</a>
             <a onclick="shareWebsite()" class="btn-share">📢 مشاركة الموقع</a>
         </div>
@@ -131,6 +145,7 @@
         } else { containers.forEach(c => c.style.display = 'none'); }
     }
 
+    // تعبئة البيانات
     const tauheed = ["العروة الوثيقة", "الروضة الأنيقة", "الدُّرُّ المُنَظَّمْ", "طَائِرَةُ السُّبَّاقِ"];
     tauheed.forEach((t, i) => { document.getElementById('tauheed').innerHTML += `<div class="book-item"><div class="book-title">${t}</div><div class="btn-group"><a href="roda${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="roda${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`; });
 
