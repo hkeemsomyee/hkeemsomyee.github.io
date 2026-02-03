@@ -26,7 +26,7 @@
         .biography-text { color: #333; font-size: 15px; white-space: pre-line; text-align: justify; }
 
         .search-container { margin: 20px 0; }
-        #bookSearch { width: 100%; padding: 15px 25px; border-radius: 30px; border: 2px solid #0b7a61; font-family: 'Cairo'; font-size: 16px; outline: none; box-sizing: border-box; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        #bookSearch { width: 100%; padding: 15px 25px; border-radius: 30px; border: 2px solid #0b7a61; font-family: 'Cairo'; font-size: 16px; outline: none; box-sizing: border-box; }
         
         .main-category { background-color: #0b7a61; color: white; border-radius: 20px; margin-bottom: 25px; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .main-category h2 { color: white !important; margin: 10px 0; font-size: 20px; }
@@ -40,10 +40,13 @@
         .book-title { font-weight: bold; font-size: 15px; }
         
         .btn-group { display: flex; gap: 8px; }
-        .btn-link { text-decoration: none; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: bold; transition: 0.2s; }
+        .btn-link { text-decoration: none; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: bold; }
         .btn-view { background: #e0f2f1; color: #0b7a61; border: 1px solid #0b7a61; }
         .btn-down { background: #0b7a61; color: white; }
-        .app-download-btn { display: inline-block; background-color: #0088cc; color: white; text-decoration: none; padding: 12px 30px; border-radius: 30px; font-weight: bold; margin-top: 10px; }
+        
+        /* أزرار التحميل المباشر */
+        .app-download-btn { display: inline-block; background-color: #0088cc; color: white; text-decoration: none; padding: 12px 30px; border-radius: 30px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+        .app-download-btn:hover { background-color: #006699; }
         
         .social-links { text-align: center; margin-top: 40px; background: white; padding: 20px; border-radius: 20px; border: 1px solid #d1e7dd; }
         .social-links a { display: inline-block; color: white; text-decoration: none; margin: 8px; padding: 12px 25px; border-radius: 35px; font-weight: bold; }
@@ -71,8 +74,7 @@
         </div>
         <div class="biography-text">
             <strong>المؤلف في سطور:</strong>
-            هو الشيخ العارف بالله تعالى السيد الجليل عبد الله هاشم غالب السروري، ولد بقرية "المقاشرة" بمحافظة تعز عام ١٣٨٥هـ (١٩٦٥م). تلقى تعليمه على يد أكابر العلماء وبرع في علوم التوحيد والسيرة والمدائح النبوية.
-            <p style="font-size: 0.85em; color: #666; margin-top: 10px;">حرر الترجمة: أ/ عيسى بن أمين القاسمي (مدرس بدار المصطفى بتريم)</p>
+            هو الشيخ العارف بالله تعالى السيد الجليل عبد الله هاشم غالب السروري، ولد بمحافظة تعز عام ١٣٨٥هـ (١٩٦٥م). كرس حياته لنشر العلم والمدائح النبوية وتأليف المنظومات العلمية النافعة.
         </div>
     </section>
 
@@ -81,10 +83,18 @@
     </div>
 
     <div class="main-category" style="background-color: #2d6a4f;">
-        <img src="m4.png" class="section-logo" alt="تطبيق أندرويد">
-        <h2>تطبيق طيبة المحبين (أندرويد)</h2>
-        <p style="font-size: 14px; margin-bottom: 15px; color: #e0f2f1;">تحميل مباشر للتطبيق الرسمي من قناة التيليجرام</p>
-        <a href="https://t.me/tebatalmhbeen/11" target="_blank" class="app-download-btn">📥 تحميل من التيليجرام</a>
+        <img src="m4.png" class="section-logo" alt="تطبيقات أندرويد">
+        <h2>تحميل التطبيقات الرسمية</h2>
+        
+        <div style="margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 15px;">
+            <h3>تطبيق طيبة المحبين</h3>
+            <a href="https://t.me/tebatalmhbeen/11" target="_blank" class="app-download-btn">📥 تحميل من التيليجرام</a>
+        </div>
+
+        <div>
+            <h3>تطبيق أطلس السير</h3>
+            <a href="https://t.me/tebatalmhbeen/21" target="_blank" class="app-download-btn" style="background-color: #d4a373; color: #1b4332;">📥 تحميل أطلس السير</a>
+        </div>
     </div>
 
     <div class="main-category">
@@ -103,23 +113,8 @@
 
     <div class="main-category" style="background-color: #054d3f;">
         <img src="m3.png" class="section-logo">
-        <h2>قسم الدرر البهية (الأوراد)</h2>
-        <button class="open-btn" onclick="toggleSection('dorar')">عرض الأوراد</button>
-        <div id="dorar" class="books-container">
-            <div class="book-item">
-                <div class="book-title">الدرر البهية والجواهر السنية</div>
-                <div class="btn-group">
-                    <a href="alhzb1.pdf" target="_blank" class="btn-link btn-view">قراءة</a>
-                    <a href="alhzb1.pdf" download class="btn-link btn-down">تحميل</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="main-category" style="background-color: #144d34;">
-        <img src="m4.png" class="section-logo">
-        <h2>قسم قصائد طيبة المحبين</h2>
-        <button class="open-btn" onclick="toggleSection('old_content')">عرض القصائد</button>
+        <h2>قسم الدرر البهية وقصائد المحبين</h2>
+        <button class="open-btn" onclick="toggleSection('old_content')">عرض المحتوى</button>
         <div id="old_content" class="books-container"></div>
     </div>
 
@@ -157,22 +152,21 @@
         } else { containers.forEach(c => c.style.display = 'none'); }
     }
 
-    // التوحيد
+    // تعبئة البيانات
     const tauheed = ["العروة الوثيقة", "الروضة الأنيقة", "الدُّرُّ المُنَظَّمْ", "طَائيرةُ السُّبَّاقِ"];
     tauheed.forEach((t, i) => { 
         document.getElementById('tauheed').innerHTML += `<div class="book-item"><div class="book-title">${t}</div><div class="btn-group"><a href="roda${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="roda${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`; 
     });
 
-    // الموالد
     const mwalid = ["شراب الألباب", "عرف الخُزام", "الإنشراح الصدري", "فيض ربي", "الدرر البهية", "عين التسنيم", "أريج الأزهار", "المِسْك الأذفر", "كِيمْياء أرْبَاب القلوب", "الروائح العطرية", "رحيق الشراب", "العسجد", "المِسْك الفوَّاح", "الترياق", "الإتحاف", "عبير الزهر", "جالي الصدا", "نَدُّ النادي", "العود النَّدي", "اللُّبَاب"];
     mwalid.forEach((t, i) => { 
         document.getElementById('mwalid').innerHTML += `<div class="book-item"><div class="book-title">${t}</div><div class="btn-group"><a href="mwled${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="mwled${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`; 
     });
 
-    // القصائد
-    const oldBooks = ["قسم تحاميد", "قسم جلالات", "قسم تصليات", "قصائد المولد", "الإِبْهاج", "العمدَةُ", "الرَّندَةُ", "الزُبْدَةُ", "القصيدة المحمدية", "الرمزية", "قصيدة حَقِيقَةُ الْحَقَائِق", "الْقَصِيدَةُ الْغَزَلِيَّةُ", "مَا عَرَفَ النَّبِيَّ", "الوسيلة الحسناء", "التوسل الأسنى", "التوسل المزان", "دُرَّةُ الدُّرَرِ", "يَا مُجَلِّيْ الْقَمَرْ", "العدة", "تخميس ابن الوردي", "أنْفَاسٌ هَاشِمِيَّةْ", "حِلْيَةُ الخَدَمِ", "النظم الاغر", "أسْنَى المَطْلَبْ", "المؤلف في سطور"];
+    const oldBooks = ["الدرر البهية والجواهر السنية", "قسم تحاميد", "قسم جلالات", "قسم تصليات", "قصائد المولد", "الإِبْهاج", "العمدَةُ", "الرَّندَةُ", "الزُبْدَةُ", "القصيدة المحمدية", "الرمزية", "قصيدة حَقِيقَةُ الْحَقَائِق", "الْقَصِيدَةُ الْغَزَلِيَّةُ", "مَا عَرَفَ النَّبِيَّ", "الوسيلة الحسناء", "التوسل الأسنى", "التوسل المزان", "دُرَّةُ الدُّرَرِ", "يَا مُجَلِّيْ الْقَمَرْ", "العدة", "تخميس ابن الوردي", "أنْفَاسٌ هَاشِمِيَّةْ", "حِلْيَةُ الخَدَمِ", "النظم الاغر", "أسْنَى المَطْلَبْ", "المؤلف في سطور"];
     oldBooks.forEach((t, i) => { 
-        document.getElementById('old_content').innerHTML += `<div class="book-item"><div class="book-title">${t}</div><div class="btn-group"><a href="te${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="te${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`; 
+        let link = (t === "الدرر البهية والجواهر السنية") ? "alhzb1.pdf" : `te${i}.pdf`;
+        document.getElementById('old_content').innerHTML += `<div class="book-item"><div class="book-title">${t}</div><div class="btn-group"><a href="${link}" target="_blank" class="btn-link btn-view">قراءة</a><a href="${link}" download class="btn-link btn-down">تحميل</a></div></div>`; 
     });
 </script>
 </body>
