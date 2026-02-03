@@ -6,61 +6,44 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3471082371880025" crossorigin="anonymous"></script>
     
     <title>مكتبة السيد عبدالله هاشم السروري | التراث العرفاني والتوحيد</title>
-    <meta name="description" content="المكتبة الرقمية الجامعة لمؤلفات السيد عبدالله هاشم السروري. تضم كتب التوحيد، السيرة النبوية، والمدائح الروحانية وفق المنهج الأشعري والشاذلي.">
-    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Cairo', sans-serif; margin: 0; background-color: #f0f9f5; color: #1b4332; padding-bottom: 60px; line-height: 1.6; }
         header { background-color: #0b4d3e; color: white; padding: 20px 0; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
         header img { height: 80px; width: auto; border-radius: 8px; margin-bottom: 10px; }
         header h1 { margin: 0; font-size: 20px; padding: 0 10px; }
-        
         .container { max-width: 900px; margin: auto; padding: 15px; }
         
-        /* قسم السيرة الذاتية */
         .author-profile { background: white; padding: 30px; border-radius: 20px; margin-bottom: 30px; border: 1px solid #d1e7dd; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: right; }
         .author-card { text-align: center; margin-bottom: 25px; border-bottom: 2px solid #f0f9f5; padding-bottom: 20px; }
-        .author-card img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #0b7a61; object-fit: cover; background: #eee; }
+        .author-card img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #0b7a61; object-fit: cover; }
         .author-card h2 { color: #0b7a61; margin: 10px 0; font-size: 24px; }
-        .author-titles { font-weight: bold; color: #2d6a4f; margin-bottom: 20px; font-size: 1.1em; }
-        .biography-text { color: #333; font-size: 15px; white-space: pre-line; text-align: justify; }
-
-        .search-container { margin: 20px 0; }
-        #bookSearch { width: 100%; padding: 15px 25px; border-radius: 30px; border: 2px solid #0b7a61; font-family: 'Cairo'; font-size: 16px; outline: none; box-sizing: border-box; }
         
         .main-category { background-color: #0b7a61; color: white; border-radius: 20px; margin-bottom: 25px; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .main-category h2 { color: white !important; margin: 10px 0; font-size: 20px; }
         .section-logo { width: 80px; height: 80px; border-radius: 50%; background: white; padding: 5px; margin-bottom: 10px; object-fit: cover; }
         
-        .open-btn { background-color: white; color: #0b7a61; border: none; padding: 12px 35px; border-radius: 30px; font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 16px; }
-        .open-btn:hover { background-color: #e0f2f1; transform: scale(1.05); }
+        .app-box { background: rgba(255,255,255,0.1); padding: 15px; border-radius: 15px; margin: 10px 0; border: 1px solid rgba(255,255,255,0.2); }
+        .app-download-btn { display: inline-block; background-color: #0088cc; color: white; text-decoration: none; padding: 12px 30px; border-radius: 30px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+        .app-download-btn:hover { background-color: #006699; transform: scale(1.05); }
+
+        .search-container { margin: 20px 0; }
+        #bookSearch { width: 100%; padding: 15px 25px; border-radius: 30px; border: 2px solid #0b7a61; font-family: 'Cairo'; outline: none; }
         
+        .open-btn { background-color: white; color: #0b7a61; border: none; padding: 10px 30px; border-radius: 30px; font-weight: bold; cursor: pointer; }
         .books-container { display: none; margin-top: 20px; background: #fff; border-radius: 15px; padding: 15px; color: #1b4332; text-align: right; }
-        .book-item { background: #f9f9f9; border-right: 6px solid #0b7a61; margin-bottom: 10px; padding: 12px 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
-        .book-title { font-weight: bold; font-size: 15px; }
-        
+        .book-item { background: #f9f9f9; border-right: 6px solid #0b7a61; margin-bottom: 10px; padding: 12px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
         .btn-group { display: flex; gap: 8px; }
-        .btn-link { text-decoration: none; padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: bold; }
+        .btn-link { text-decoration: none; padding: 7px 12px; border-radius: 6px; font-size: 12px; font-weight: bold; }
         .btn-view { background: #e0f2f1; color: #0b7a61; border: 1px solid #0b7a61; }
         .btn-down { background: #0b7a61; color: white; }
         
-        /* أزرار التحميل المباشر */
-        .app-download-btn { display: inline-block; background-color: #0088cc; color: white; text-decoration: none; padding: 12px 30px; border-radius: 30px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
-        .app-download-btn:hover { background-color: #006699; }
-        
-        .social-links { text-align: center; margin-top: 40px; background: white; padding: 20px; border-radius: 20px; border: 1px solid #d1e7dd; }
-        .social-links a { display: inline-block; color: white; text-decoration: none; margin: 8px; padding: 12px 25px; border-radius: 35px; font-weight: bold; }
-        .btn-whatsapp { background-color: #28a745; }
-        .btn-telegram { background-color: #0088cc; }
-        
         footer { text-align: center; padding: 40px; color: #666; font-size: 14px; }
-        .privacy-link { color: #0b7a61; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="شعار مكتبة طيبة المحبين">
+    <img src="logo.png" alt="شعار المكتبة">
     <h1>مكتبة طيبة المحبين وروضة المحبوبين</h1>
 </header>
 
@@ -70,11 +53,10 @@
         <div class="author-card">
             <img src="author.jpg" alt="السيد عبدالله هاشم السروري">
             <h2>السيد عبدالله هاشم السروري</h2>
-            <div class="author-titles">الحسيني نسباً • الأشعري عقيدةً • الشافعي مذهباً • الشاذلي طريقةً</div>
+            <p>الحسيني نسباً • الأشعري عقيدةً • الشافعي مذهباً • الشاذلي طريقةً</p>
         </div>
         <div class="biography-text">
-            <strong>المؤلف في سطور:</strong>
-            هو الشيخ العارف بالله تعالى السيد الجليل عبد الله هاشم غالب السروري، ولد بمحافظة تعز عام ١٣٨٥هـ (١٩٦٥م). كرس حياته لنشر العلم والمدائح النبوية وتأليف المنظومات العلمية النافعة.
+            <strong>المؤلف في سطور:</strong> أحد شيوخ العلم الذين نذروا حياتهم لخدمة الشرع ونفع العباد، ولد بتعز عام ١٣٨٥هـ، وله مؤلفات عديدة في التوحيد والسيرة.
         </div>
     </section>
 
@@ -83,17 +65,17 @@
     </div>
 
     <div class="main-category" style="background-color: #2d6a4f;">
-        <img src="m4.png" class="section-logo" alt="تطبيقات أندرويد">
+        <img src="m4.png" class="section-logo" alt="أيقونة التطبيقات">
         <h2>تحميل التطبيقات الرسمية</h2>
         
-        <div style="margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 15px;">
+        <div class="app-box">
             <h3>تطبيق طيبة المحبين</h3>
-            <a href="https://t.me/tebatalmhbeen/11" target="_blank" class="app-download-btn">📥 تحميل من التيليجرام</a>
+            <a href="https://t.me/tebatalmhbeen/11" target="_blank" class="app-download-btn">📥 تحميل عبر التيليجرام</a>
         </div>
 
-        <div>
+        <div class="app-box">
             <h3>تطبيق أطلس السير</h3>
-            <a href="https://t.me/tebatalmhbeen/21" target="_blank" class="app-download-btn" style="background-color: #d4a373; color: #1b4332;">📥 تحميل أطلس السير</a>
+            <a href="https://t.me/tebatalmhbeen/12" target="_blank" class="app-download-btn" style="background-color: #d4a373; color: #1b4332;">📥 تحميل أطلس السير المباشر</a>
         </div>
     </div>
 
@@ -113,22 +95,16 @@
 
     <div class="main-category" style="background-color: #054d3f;">
         <img src="m3.png" class="section-logo">
-        <h2>قسم الدرر البهية وقصائد المحبين</h2>
+        <h2>قسم الأوراد والقصائد</h2>
         <button class="open-btn" onclick="toggleSection('old_content')">عرض المحتوى</button>
         <div id="old_content" class="books-container"></div>
-    </div>
-
-    <div class="social-links">
-        <h3>تواصل معنا</h3>
-        <a href="https://wa.me/00967734404355" target="_blank" class="btn-whatsapp">واتساب</a>
-        <a href="https://t.me/tebatalmhbeen" target="_blank" class="btn-telegram">تليجرام</a>
     </div>
 
 </div>
 
 <footer>
     <p>جميع الحقوق محفوظة &copy; مكتبة طيبة المحبين 2026</p>
-    <p><a href="privacy.html" class="privacy-link">سياسة الخصوصية</a></p>
+    <p><a href="privacy.html" style="color:#0b7a61; text-decoration:none; font-weight:bold;">سياسة الخصوصية</a></p>
 </footer>
 
 <script>
@@ -152,7 +128,6 @@
         } else { containers.forEach(c => c.style.display = 'none'); }
     }
 
-    // تعبئة البيانات
     const tauheed = ["العروة الوثيقة", "الروضة الأنيقة", "الدُّرُّ المُنَظَّمْ", "طَائيرةُ السُّبَّاقِ"];
     tauheed.forEach((t, i) => { 
         document.getElementById('tauheed').innerHTML += `<div class="book-item"><div class="book-title">${t}</div><div class="btn-group"><a href="roda${i+1}.pdf" target="_blank" class="btn-link btn-view">قراءة</a><a href="roda${i+1}.pdf" download class="btn-link btn-down">تحميل</a></div></div>`; 
